@@ -1,0 +1,59 @@
+package ejerc23de3ro;
+
+import java.util.Scanner;
+
+public class ejerc23 {
+
+	public static void main(String[] args) {
+		 String nombre,apellido;
+		float DNI,monto1,saldoActual,saldoActual2,cantqRetira;
+		char opcion;//por que tiene que estar en char y en int?
+         int saldoinicial=80000;
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.print("ingrese su nombre:  ");
+		nombre = scanner.next();
+
+		System.out.println("ingrese su apellido: ");
+		apellido = scanner.next();
+		
+		System.out.println("menu:\r\n"
+				+ "1. ingresar dinero \r\n" + "2. Retirar dinero \r\n" + "3. Consultar saldo\r\n" +  "4. Salir"	);
+              opcion = scanner.next().charAt(0);//char?
+
+		switch (opcion) {
+		case '1':
+	        System.out.print("que monto desea ingresar: ");
+			 monto1 = scanner.nextFloat();
+			saldoActual = monto1+saldoinicial;
+			System.out.println("su saldo actual es de " + saldoActual);
+			break;
+
+		case '2':
+		
+			System.out.print("que cant desea retirar: ");
+			cantqRetira = scanner.nextFloat();
+			
+			if (cantqRetira>saldoinicial) {
+				System.out.println("saldo insuficiente.");
+				}
+			else if  (cantqRetira<saldoinicial) {		
+				saldoActual2= saldoinicial-cantqRetira;
+				System.out.println("su saldo es "+saldoActual2);
+				}
+		break;
+
+		case '3':
+			System.out.println("su saldo es "+saldoinicial);
+		
+			break;
+
+		default:
+			System.out.println("finalizo el programa");
+			break;
+		}
+	}
+
+	}
+	
+
