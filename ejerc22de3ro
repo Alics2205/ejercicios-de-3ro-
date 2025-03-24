@@ -1,63 +1,63 @@
-#include<iostream>
-#include <math.h>
-using namespace std;
+package ejercicio22de3ro;
 
-int main(){
-	float suma,raiz_cuadrada,cubo,resta,multi,div,n1,n2,n3=3;
-	char opcion;
-	 cout<<"elegir A, B, C: ";
-	 cin>>opcion;
-	 
-	 switch (opcion) {
-	 	case 'a':
-	 	case 'A':
-	 		cout<<"Ingrese un numero: "<<endl;
-	 		cin>>n1;
-	 		raiz_cuadrada = sqrt(n1);
-            cout<<"la raiz cuadrada de "<<n1<<" es: "<<raiz_cuadrada<<endl;
-        break;
-        
-        case 'b':
-        case 'B':
-        	cout<<"ingrese un numero: "<<endl;
-        	cin>>n1;
-        	cout<<"ingrese otro numero: "<<endl;
-        	cin>>n2;
-        	suma=n1+n2;
-        	cubo=pow(suma, n3);
-            cout<<"la suma al cubo es:"<<cubo<<endl;
-        break;
-		
+import java.util.Scanner;
+
+public class ejerc22de3ro {
+	public static void main(String[] args) {
+		float suma, raizCuadrada, cubo, resta, multi, div, n1, n2;
+		int n3 = 3;
+		char opcion;
+
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("Elegir A, B, C: ");
+		System.out.println("Elegir A, B, C:\r\n"
+
+				+ "• A raiz cuadrada \r\n" + "• B  Suma al cubo:\r\n" + "• C Operaciones entre dos números"	);
+		opcion = scanner.next().charAt(0);
+
+		switch (opcion) {
+		case 'a':
+		case 'A':
+			System.out.print("Ingrese un número: ");
+			n1 = scanner.nextFloat();
+			raizCuadrada = (float) Math.sqrt(n1);
+			System.out.println("La raíz cuadrada de " + n1 + " es: " + raizCuadrada);
+			break;
+
+		case 'b':
+		case 'B':
+			System.out.print("Ingrese un número: ");
+			n1 = scanner.nextFloat();
+			System.out.print("Ingrese otro número: ");
+			n2 = scanner.nextFloat();
+			suma = n1 + n2;
+			cubo = (float) Math.pow(suma, n3);
+			System.out.println("La suma al cubo es: " + cubo);
+			break;
+
 		case 'c':
 		case 'C':
-		    cout<<"ingrese un numero: "<<endl;
-		    cin>>n1;
-		    cout<<"ingrese otro numero: "<<endl;
-		    cin>>n2;
-		    suma=n1+n2;
-		    cout<<"la suma es: "<<suma<<endl;
-		    resta=n1-n2;
-		    cout<<"la resta es: "<<resta<<endl;
-		    multi=n1*n2;
-		    cout<<"la multiplicacion es: "<<multi<<endl;
-		    div=n1/n2;
-		    
-		    cout<<"la division es: "<<div<<endl;
-		break;
-		
-		default:
-			cout<<"que sos ALLISON";
-		break;
-			
-	 }
-		
-}
-//quiero hacerlo en java pero tengo problemas cn :
-/*	case 'b':
-		case 'B':
+			System.out.print("Ingrese un número: ");
+			n1 = scanner.nextFloat();
+			System.out.print("Ingrese otro número: ");
+			n2 = scanner.nextFloat();
 			suma = n1 + n2;
-	    suma =  base;
-			
-			double   base , exponente = 2;
-			double potencia = Math.pow(base , exponente);
-			break; */
+			System.out.println("La suma es: " + suma);
+			resta = n1 - n2;
+			System.out.println("La resta es: " + resta);
+			multi = n1 * n2;
+			System.out.println("La multiplicación es: " + multi);
+			if (n2 != 0) {
+				div = n1 / n2;
+				System.out.println("La división es: " + div);
+			} else {
+				System.out.println("Error: División por cero.");
+			}
+			break;
+
+		default:
+			System.out.println("¿Qué sos, ALLISON?");
+			break;
+		}
+	}
+}
