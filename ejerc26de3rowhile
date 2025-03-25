@@ -1,0 +1,19 @@
+package ejerc26de3ro;
+
+import java.util.Scanner;
+
+public class Exe26ContraseñaconWhile {
+
+	public static void main(String[] args) throws InterruptedException {
+
+		Scanner ingreso = new Scanner(System.in);
+		System.out.println("ingrese su contraseña: ");
+		int contra = ingreso.nextInt();
+		
+		while (contra > 0) {
+			contra--;
+		System.out.println(contra);	
+		Thread.sleep(300000000);	//no me acuerdo mucho de sleep .preguntar como funciona 
+		}
+	}
+}
