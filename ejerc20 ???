@@ -1,0 +1,40 @@
+package ejercicio20de3ro;
+
+import java.util.Scanner;
+
+public class Ejercicio100seguidores {
+	public static void main(String[] args) {
+		int contra = 2008;
+		int intentos = 0;
+		Scanner ingreso = new Scanner(System.in);
+
+		System.out.println("ingrese su contra");
+		contra = ingreso.nextInt();
+		intentos++;
+
+		while (contra != 2008 && intentos < 3) {
+			Sleep(1000);
+			System.out.println("volve a intentarlo");
+			contra = ingreso.nextInt();
+			intentos++;
+			System.out.println("\nIntentos realizados: " + intentos);
+
+		}
+	}
+
+	private static void Sleep(int i) {
+		// TODO Auto-generated method stub
+	}//me tira error
+
+	if(contra==2008){
+		
+		System.out.println("Contrasena correcta.");
+	}
+	else if(contra!=2008){
+		
+		System.out.println("Bloqueaste el usuario, salame. ");
+	}
+
+	return 0;
+
+}}
