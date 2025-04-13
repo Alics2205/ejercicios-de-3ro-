@@ -1,9 +1,10 @@
-package ejercicio20de3ro;
+package ejerc20de3ro;
 
 import java.util.Scanner;
 
-public class Ejercicio100seguidores {
-	public static void main(String[] args) {
+public class Ejerc20 {
+
+	public static void main(String[] args) throws InterruptedException {
 		int contra = 2008;
 		int intentos = 0;
 		Scanner ingreso = new Scanner(System.in);
@@ -11,30 +12,23 @@ public class Ejercicio100seguidores {
 		System.out.println("ingrese su contra");
 		contra = ingreso.nextInt();
 		intentos++;
-
+		Thread.sleep(100);
 		while (contra != 2008 && intentos < 3) {
-			Sleep(1000);
+
 			System.out.println("volve a intentarlo");
 			contra = ingreso.nextInt();
 			intentos++;
 			System.out.println("\nIntentos realizados: " + intentos);
 
 		}
+
+		if (contra == 2008) {
+
+			System.out.println("Contrasena correcta.");
+		} else if (contra != 2008) {
+
+			System.out.println("Bloqueaste el usuario, salame. ");
+		}
+
 	}
-
-	private static void Sleep(int i) {
-		// TODO Auto-generated method stub
-	}//me tira error
-
-	if(contra==2008){
-		
-		System.out.println("Contrasena correcta.");
-	}
-	else if(contra!=2008){
-		
-		System.out.println("Bloqueaste el usuario, salame. ");
-	}
-
-	return 0;
-
-}}
+}
