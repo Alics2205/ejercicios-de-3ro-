@@ -1,0 +1,41 @@
+package ejercicio15de3ro;
+
+import java.util.Scanner;
+
+public class ejerc15 {
+
+	public static void main(String[] args) {
+
+		Scanner scanner = new Scanner(System.in);
+
+		System.out.print("Ingrese el primer número : ");
+		int n1 = scanner.nextInt();
+
+		System.out.print("Ingrese el segundo número : ");
+		int n2 = scanner.nextInt();
+
+		System.out.print("Ingrese el tercer número : ");
+		int n3 = scanner.nextInt();
+
+		int mayor = n1;
+		int menor = n1;
+
+		if (n2 > mayor) { //si 2numIngresado es mayor a 1numIngresado
+			mayor = n2;// 2numIngresado es mayor
+		}
+		if (n3 > mayor) { //si 3numIngresado es mayor a 2numIngresado
+			mayor = n3;// 3numIngresado es mayor
+		}
+
+		if (n2 < menor) { //si 2numIngresado es menor a 1numIngresado
+			menor = n2; // 2numIngresado es menor
+		}
+		if (n3 < menor) { //si 3numIngresado es menor a 2numIngresado
+			menor = n3;// 3numIngresado es menor
+		}
+
+		System.out.println("El número mayor es: " + mayor);
+		System.out.println("El número menor es: " + menor);
+	}
+
+}
