@@ -11,15 +11,11 @@ public class Ejerc24_100seguidores {
 		while (i < 101) {
 			System.out.println(i);
 			i++;
+			Thread.sleep(20);
 		}
 		System.out.println("llgaste a los 100 seguidores!!");
-		try {
-			// Espera 20 ms antes de incrementar nuevamente
-			Thread.sleep(20);
-		} catch (InterruptedException e) {
-			System.out.println("Se produjo un error en la espera: " + e.getMessage());
 
-		}
+
+
 	}
 }
-//no c como usar el sleep 
