@@ -1,0 +1,33 @@
+package ejercicio25de3ro;
+
+import java.util.Scanner;
+
+public class Ejerciciodecontrasena {
+	public static void main(String[] args) {
+		int contra = 2008;
+		int intentos = 0;
+		Scanner ingreso = new Scanner(System.in);
+
+		System.out.println("ingrese su contra: ");
+		contra = ingreso.nextInt();
+		intentos++;
+
+		while (contra != 2008 && intentos < 3) {
+
+			System.out.println("\tvolve a intentarlo");
+			contra = ingreso.nextInt();
+			intentos++;
+			System.out.println("\nIntentos realizados: \n" + intentos);
+
+		}
+
+		if (contra == 2008) {
+
+			System.out.println("Contraseña correcta.");
+		} else if (contra != 2008) {
+
+			System.out.println("Bloqueaste el usuario, salame. ");
+		}
+
+	}
+}
