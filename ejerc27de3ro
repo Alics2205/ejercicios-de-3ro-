@@ -1,0 +1,38 @@
+package ejerc27de3ro;
+
+import java.util.Scanner;
+
+public class Ejerc27de3ro {
+	public static void main(String[] args)throws InterruptedException {
+		Scanner datos = new Scanner(System.in);
+		
+		int intentos = 1;
+		int contraseña = 2008;
+	
+
+		do {
+			System.out.println("Ingresa tu contraseña: ");
+			contraseña = datos.nextInt();
+
+			if (contraseña != 2008) {
+				Thread.sleep(20);
+
+				intentos++; // intentos = intentos + 1;
+
+				if (intentos < 5) {
+					System.out.println("Volve a intentarlo ");
+				}
+
+			}
+
+		} while (contraseña != 2008 && intentos < 5);
+
+		if (contraseña == 2008) {
+			System.out.println("contraseña correcta");
+		}
+		if (contraseña != 2008) {
+			System.out.println("perdio su cuenta");
+		}
+
+	}
+}
