@@ -1,0 +1,26 @@
+package ejerc28de3ro;
+
+import java.util.Scanner;
+
+public class Ejerc28de3ro {
+	public static void main(String[] args)throws InterruptedException {
+		Scanner scanner = new Scanner(System.in);
+
+		int temp = 30;
+
+		while (temp>0 && temp<=100) {
+			System.out.println(temp + "°C");
+			temp++;
+			Thread.sleep(20);
+if (temp==85) {
+	System.out.println("CUIDADO!, TEMPERATURA PELIGROSA");
+}
+if (temp==101) {
+	System.err.println("VALOR EXTREMO. APAGANDO PC");
+}
+		}
+	
+
+	}
+
+}
