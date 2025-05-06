@@ -1,0 +1,50 @@
+package package ejerc29de3ro;
+
+import java.util.Scanner;
+
+public class Ejerc29de3ro {
+	public static void main(String[] args) throws InterruptedException {
+
+		int contra = 2008;
+		int intentos = 0;
+		Scanner ingreso = new Scanner(System.in);
+		do {
+			System.out.println("ingrese su contra: ");
+			contra = ingreso.nextInt();
+
+			if (contra == 2008) {
+				System.out.println("contraseña correcta");
+			}
+			else if  (contra != 2008) {
+				System.err.println("contraseña incorrecta");
+			}
+
+		} while (contra != 2008);
+	}
+
+}
+;
+
+import java.util.Scanner;
+
+public class Ejerc29de3ro {
+	public static void main(String[] args) throws InterruptedException {
+
+		int contra = 2008;
+		int intentos = 0;
+		Scanner ingreso = new Scanner(System.in);
+		do {
+			System.out.println("ingrese su contra: ");
+			contra = ingreso.nextInt();
+
+			if (contra == 2008) {
+				System.out.println("contraseña correcta");
+			}
+			else if  (contra != 2008) {
+				System.err.println("contraseña incorrecta");
+			}
+
+		} while (contra != 2008);
+	}
+
+}
