@@ -1,0 +1,34 @@
+package ejerc30de3ro;
+
+import java.util.Scanner;
+
+public class Ejerc30de3ro_While {
+	 
+	public static void main(String[] args) {
+		Scanner ingreso = new Scanner(System.in);
+
+		
+		System.out.println("ingrese num1: ");
+		int num1 = ingreso.nextInt();
+		System.out.println("ingrese num2: ");
+		int num2 = ingreso.nextInt();
+		int suma = num1+num2;
+		System.out.println("¿Desea continuar? S/N: ");
+         char letra = ingreso.next().charAt(0);//char?
+
+         if (letra == 'S' || letra == 's'){
+         	System.out.println("salio del progama.");
+     	}
+     	
+     	while (letra == 'N' || letra =='n'){
+     		System.out.println("¿Desea continuar? S/N: ");
+            char letra1 = ingreso.next().charAt(0);//char?     		
+     		if (letra1 == 'S' || letra1 == 's'){
+             	System.out.println("salio del progama.");
+   	}
+     	    else if (letra1 == 'N' || letra1 == 'n'){
+     	}
+         		
+	}
+}
+}
